@@ -1,0 +1,165 @@
+body {
+    background: linear-gradient(135deg, #8C52FF, #1E1E1E);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding-bottom: 20px;
+    overflow-y: auto;
+}
+
+/* Gradient Animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Weather Container */
+#weather-container {
+    background: rgba(255, 255, 255, 0.2);
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on weather container */
+#weather-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.3);
+}
+
+/* Headings and Text */
+h2, label, p {
+    color: #fff;
+    margin: 8px 0;
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Input Field */
+input {
+    width: calc(100% - 16px);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-top: 20px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input focus effect */
+input:focus {
+    outline: none;
+    border-color: #debff4;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Button */
+button {
+    background: linear-gradient(45deg, #debff4, #8b48d7);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 120px;
+    font-size: 1rem;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+/* Button Hover */
+button:hover {
+    background: linear-gradient(45deg, #8b48d7, #debff4);
+    transform: scale(1.05);
+}
+
+/* Weather Icon */
+#weather-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px;
+    display: none;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Temperature Display */
+#temp-div p {
+    font-size: 3.5rem;
+    margin-top: -30px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(45deg, #ff9a9e, #fad0c4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Weather Info */
+#weather-info {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+/* Hourly Forecast Section */
+#hourly-forecast {
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Hourly Forecast Items */
+.hourly-item {
+    flex: 0 0 auto;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect on Hourly Items */
+.hourly-item:hover {
+    transform: scale(1.1);
+}
+
+/* Hourly Weather Icons */
+.hourly-item img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+/* Hourly Heading */
+#hourly-heading {
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Footer */
